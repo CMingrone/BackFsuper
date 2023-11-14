@@ -1,7 +1,7 @@
-package com.baseDeDatos.controller
+package com.FSuper.controller
 
-import com.baseDeDatos.model.Producto
-import com.baseDeDatos.service.ProductoService
+import com.FSuper.model.Producto
+import com.FSuper.service.ProductoService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/producto")
-@CrossOrigin("*")
 class ProductoController {
 
     @Autowired

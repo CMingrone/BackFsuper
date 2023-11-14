@@ -1,4 +1,4 @@
-package com.baseDeDatos.model
+package com.FSuper.model
 
 import jakarta.persistence.*
 

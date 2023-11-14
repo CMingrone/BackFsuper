@@ -1,6 +1,6 @@
-package com.baseDeDatos.repository
+package com.FSuper.repository
 
-import com.baseDeDatos.model.Producto
+import com.FSuper.model.Producto
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 

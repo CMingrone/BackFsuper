@@ -1,8 +1,8 @@
-package com.baseDeDatos.service
+package com.FSuper.service
 
 import GenericServiceImpl
-import com.baseDeDatos.model.Producto
-import com.baseDeDatos.repository.ProductoRepository
+import com.FSuper.model.Producto
+import com.FSuper.repository.ProductoRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Service
