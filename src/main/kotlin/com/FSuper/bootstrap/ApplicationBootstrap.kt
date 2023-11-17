@@ -32,6 +32,6 @@ class ApplicationBootstrap : InitializingBean {
     }
 
     override fun afterPropertiesSet() {
-        crearProductos()
+        //crearProductos()
     }
 }
