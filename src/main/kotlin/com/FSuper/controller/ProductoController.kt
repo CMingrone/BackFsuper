@@ -22,6 +22,7 @@ class ProductoController {
     fun getAll(@PathVariable palabraFiltro : String): MutableList<Producto>? {
         return productoService.getAll()
     }
+
     @PostMapping("/save")
     fun save(@RequestBody producto: Producto): ResponseEntity<Producto> {
         productoService.save(producto)
