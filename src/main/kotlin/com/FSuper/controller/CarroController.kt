@@ -20,6 +20,21 @@ class CarroController {
         return carroService.getAll()!!.filter { it.cantidad > 0 }.toMutableList()
 
     }
+
+    @PutMapping("/agregarProducto/{id}")
+    fun sumarUnidad(@PathVariable id : Long): CarroProducto{
+
+        val producto : CarroProducto = carroService.getCarroProductoById(id)!!
+        producto.agregarUno()
+        return carroService.save(producto)
+    }
+
+    @PutMapping("/vaciarCarro")
+    fun vaciarCarro(){
+        val producto : MutableList<CarroProducto> = carroService.getAll()!!
+        producto.forEach { it.resetear() }
+        producto.forEach { carroService.save(it) }
+    }
 }
 
 

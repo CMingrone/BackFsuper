@@ -12,4 +12,13 @@ data class CarroProducto (
     val nombre: String = "",
 
     @Column
-    var cantidad: Int = 0)
+    var cantidad: Int = 0){
+
+    fun agregarUno(){
+        cantidad ++
+    }
+
+    fun resetear(){
+        cantidad = 0
+    }
+}
