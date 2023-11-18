@@ -1,4 +1,5 @@
 package com.FSuper.service
+
 import GenericServiceImpl
 import com.FSuper.model.Sector
 import org.springframework.beans.factory.annotation.Autowired
