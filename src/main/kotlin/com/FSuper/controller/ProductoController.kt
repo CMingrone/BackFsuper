@@ -18,9 +18,20 @@ class ProductoController {
     fun getAll(): MutableList<Producto>? {
         return productoService.getAll()
     }
-    @GetMapping("/getAll/{palabraFiltro}")
-    fun getAll(@PathVariable palabraFiltro : String): MutableList<Producto>? {
-        return productoService.getAll()
+
+    @GetMapping("/getByDescFlia/{palabraFiltro}")
+    fun getByDescFlia(@PathVariable palabraFiltro : String): MutableList<Producto>? {
+        return productoService.getByDescSector(palabraFiltro)
+    }
+
+    @GetMapping("/getByDescSector/{palabraFiltro}")
+    fun getBySector(@PathVariable palabraFiltro : String): MutableList<Producto>? {
+        return productoService.getByDescSector(palabraFiltro)
+    }
+
+    @GetMapping("/getByNombreRepositor/{palabraFiltro}")
+    fun getByNombreRepositor(@PathVariable palabraFiltro : String): MutableList<Producto>? {
+        return productoService.getByNombreRepositor(palabraFiltro)
     }
 
     @PostMapping("/save")
