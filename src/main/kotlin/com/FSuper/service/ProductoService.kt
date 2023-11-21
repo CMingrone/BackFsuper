@@ -1,6 +1,7 @@
 package com.FSuper.service
 
 import GenericServiceImpl
+import com.FSuper.dto.ProductoDto
 import com.FSuper.model.Producto
 import com.FSuper.repository.ProductoRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -20,11 +21,11 @@ class ProductoService : GenericServiceImpl<Producto, Long>() {
         return productoRepository.getByDescFlia(descripcionFlia)
     }
 
-    fun getByDescSector(descripcionSector : String): MutableList<Producto>? {
+    fun getByDescSector(descripcionSector : String): MutableList<ProductoDto>? {
         return productoRepository.getByDescSector(descripcionSector)
     }
 
-    fun getByNombreRepositor(nombreRepositor: String): MutableList<Producto>? {
+    fun getByNombreRepositor(nombreRepositor: String): MutableList<ProductoDto>? {
         return productoRepository.getByNombreRepositor(nombreRepositor)
     }
 }

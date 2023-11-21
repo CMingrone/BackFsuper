@@ -1,5 +1,6 @@
 package com.FSuper.controller
 
+import com.FSuper.dto.ProductoDto
 import com.FSuper.model.Producto
 import com.FSuper.service.ProductoService
 import org.springframework.beans.factory.annotation.Autowired
@@ -21,16 +22,16 @@ class ProductoController {
 
     @GetMapping("/getByDescFlia/{palabraFiltro}")
     fun getByDescFlia(@PathVariable palabraFiltro : String): MutableList<Producto>? {
-        return productoService.getByDescSector(palabraFiltro)
+        return productoService.getByDescFlia(palabraFiltro)
     }
 
     @GetMapping("/getByDescSector/{palabraFiltro}")
-    fun getBySector(@PathVariable palabraFiltro : String): MutableList<Producto>? {
+    fun getBySector(@PathVariable palabraFiltro : String): MutableList<ProductoDto>? {
         return productoService.getByDescSector(palabraFiltro)
     }
 
     @GetMapping("/getByNombreRepositor/{palabraFiltro}")
-    fun getByNombreRepositor(@PathVariable palabraFiltro : String): MutableList<Producto>? {
+    fun getByNombreRepositor(@PathVariable palabraFiltro : String): MutableList<ProductoDto>? {
         return productoService.getByNombreRepositor(palabraFiltro)
     }
 

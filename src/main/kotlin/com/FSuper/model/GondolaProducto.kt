@@ -12,4 +12,8 @@ data class GondolaProducto (
 
         @ManyToOne
         @JoinColumn(name = "id_gondola", nullable = true)
-        val gondola: Gondola)
+        val gondola: Gondola,
+
+        @ManyToOne
+        @JoinColumn(name = "id_presentacion", nullable = true)
+        val presetacion : Presentacion)
